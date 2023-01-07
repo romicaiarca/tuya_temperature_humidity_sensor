@@ -1,10 +1,11 @@
 {
   "domain": "tuya_temperature_humidity_sensor",
-  "name": "TuyaTemperatureHumiditySensor",
-  "documentation": "https://github.com/romicaiarca/tuya_temperature_humidity_sensor/",
+  "name": "Tuya Temperature Humidity Sensor",
+  "documentation": "https://github.com/romicaiarca/tuya_temperature_humidity_sensor",
+  "issue_tracker": "https://github.com/romicaiarca/tuya_temperature_humidity_sensor/issues",
   "dependencies": [],
-  "codeowners": [],
+  "codeowners": ["@romicaiarca"],
   "requirements": ["tinytuya==1.9.1"],
-  "iot_class": "local_polling",
+  "iot_class": "cloud_polling",
   "version": "0.0.1"
 }
