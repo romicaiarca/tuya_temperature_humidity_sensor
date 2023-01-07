@@ -24,4 +24,4 @@ sensor:
         - device_id: "bf24...n8xt" # device_id
         - device_id: "bf25...ygxv" # device_id
 ```
-Author: Romică Iarca @romicaiarca
+Author: Romică Iarca [@romicaiarca](https://github.com/romicaiarca)
