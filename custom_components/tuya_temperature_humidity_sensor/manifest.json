@@ -7,5 +7,5 @@
   "codeowners": ["@romicaiarca"],
   "requirements": ["tinytuya==1.9.1"],
   "iot_class": "cloud_polling",
-  "version": "0.0.1"
+  "version": "2023.1.1"
 }

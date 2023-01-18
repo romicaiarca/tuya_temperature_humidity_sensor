@@ -41,10 +41,10 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required("sensors", default={}): SENSORS_SCHEMA,
 })
 
-def setup_platform(
+async def async_setup_platform(
     hass: HomeAssistant,
     config: ConfigType,
-    add_entities: AddEntitiesCallback,
+    async_add_entities: AddEntitiesCallback,
     discovery_info: DiscoveryInfoType | None = None
 ) -> None:
     """Set up the sensor platform."""
@@ -56,10 +56,10 @@ def setup_platform(
 
     for deviceEntry in sensorsEntities:
         for key, device in deviceEntry.items():
-            entities.append(TemperatureHumiditySensor(device, 'temperature', config))
-            entities.append(TemperatureHumiditySensor(device, 'humidity', config))
-            entities.append(TemperatureHumiditySensor(device, 'battery_percentage', config))
+            entities.append(TemperatureHumiditySensor(device, 'temperature', config, hass))
+            entities.append(TemperatureHumiditySensor(device, 'humidity', config, hass))
+            entities.append(TemperatureHumiditySensor(device, 'battery_percentage', config, hass))
 
-    add_entities(entities)
+    async_add_entities(entities)
 
 
